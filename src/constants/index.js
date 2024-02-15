@@ -259,7 +259,8 @@ import {
       ],
       image: tripguide,
       source_code_link: "https://github.com/",
-    },
+    }
+
   ];
   
   export { services, technologies, experiences, testimonials, projects };
