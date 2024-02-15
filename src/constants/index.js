@@ -23,6 +23,9 @@ import {
     jobit,
     tripguide,
     threejs,
+    ecommerce,
+    portfolio1,
+    portfolio3,
   } from "../assets";
   
   export const navLinks = [
@@ -216,7 +219,7 @@ import {
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/freelancer-amirhamza",
     },
     {
       name: "Job IT",
@@ -237,7 +240,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/freelancer-amirhamza",
     },
     {
       name: "Trip Guide",
@@ -258,8 +261,71 @@ import {
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
-    }
+      source_code_link: "https://github.com/freelancer-amirhamza",
+    },
+    {
+      name: "FullStack E-Commerce Website",
+      description:
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      tags: [
+        {
+          name: "nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "react",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: ecommerce,
+      source_code_link: "https://farmart-amir.netlify.app/",
+    },
+    {
+      name: "React personal portfolio",
+      description:
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "framer-motion",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: portfolio1,
+      source_code_link: "https://github.com/freelancer-amirhamza",
+    },
+    {
+      name: "LEGAL SOLUTIONS",
+      description:
+        "We are committed to excellence and have a deep understanding of the law. Our aim is to provide you with practical solutions.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: portfolio3,
+      source_code_link: "https://github.com/freelancer-amirhamza",
+    },
 
   ];
   
