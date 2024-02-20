@@ -8,6 +8,8 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 
+
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm ] = useState({
@@ -16,8 +18,43 @@ const Contact = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
-  const handleChang = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChang = (e) => {
+    const {name, value} = e.target;
+
+    setForm({...form, [name]: value})
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+emailjs.send(
+  'service_uu46xej',
+  'template_i7unnhr',
+  {
+    name: form.name,
+    email:"amirhamza27940@gmail.com",
+    message:form.message,
+  },
+  'aRfaOYmx8PfQjgxEW',
+)
+.then(() => {
+  setLoading(false);
+  alert("Thank you, I will get back to you as soon as possible.");
+  
+  setForm({
+    name: '', 
+    email: '',
+    message: '',
+  })
+}, (error) => {
+  setLoading(false)
+  console.log(error);
+
+  alert("Something went wrong.")
+}
+)
+
+  };
 
   return (
     <div className="flex xl:mt-12 xl:flex-row flex-col-reverse gap-10
