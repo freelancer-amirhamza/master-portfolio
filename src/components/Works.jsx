@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
@@ -8,22 +8,16 @@ import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
+const ProjectCard = ({index,name,description,tags,image,source_code_link,
 }) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
-        tiltMaxAngleX={45}
-        tiltMaxAngleY={45}
+        tiltMaxAngleX={25}
+        tiltMaxAngleY={25} 
         scale={1}
         transitionSpeed={450}
-        className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px]'
+        className='bg-tertiary p-3 rounded-2xl md:w-full w-[320px]'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -46,12 +40,12 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <div className='mt-2'>
+          <h3 className='text-white font-bold text-[20px]'>{name}</h3>
+          {/* <p className='mt-2 text-secondary text-[14px]'>{description}</p> */}
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-2 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
